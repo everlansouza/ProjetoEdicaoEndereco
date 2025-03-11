@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Erro";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h2 class="text-danger">Erro!</h2>
+            <p>Ocorreu um erro ao processar sua solicitação.</p>
+            @if (Model != null && !string.IsNullOrEmpty(Model.RequestId))
+            {
+                <p><strong>ID da Requisição:</strong> <code>@Model.RequestId</code></p>
+            }
+            <p>Por favor, tente novamente mais tarde.</p>
+        </div>
+    </div>
+</div>
